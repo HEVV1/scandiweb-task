@@ -1,0 +1,84 @@
+@mixin bgimgin( $file:'', $important: null ){
+	@if $important == important {
+		$important: '' !important;
+	} @else {
+		$important: null;
+	}
+	background-image: url($image_directory + $file) $important;
+}
+
+@mixin noselect() {
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// "box-shadow" is reserved by bootstrap
+@mixin boxy-shadow( $parameters, $important: null ) {
+	$parameters: unquote($parameters);
+	@if $important == important {
+		$important: '' !important;
+	} @else {
+		$important: null;
+	}
+	-webkit-box-shadow: $parameters $important;
+	-moz-box-shadow: $parameters $important;
+	box-shadow: $parameters $important;
+}
+
+@mixin linear-gradient($parameters) {
+	$parameters: unquote($parameters);
+	background: -webkit-linear-gradient($parameters); /* For Safari 5.1 to 6.0 */
+	background: linear-gradient($parameters); /* Standard syntax (must be last) */
+}
+
+@mixin radial-gradient($parameters) {
+	$parameters: unquote($parameters);
+	background: -webkit-radial-gradient($parameters);
+	background: radial-gradient($parameters); /* Standard syntax (must be last) */
+}
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+  /* WebKit, Blink, Edge */
+	@include optional-at-root('::-webkit-input-placeholder') { @content; }
+  /* Mozilla Firefox 4 to 18 */
+	@include optional-at-root(':-moz-placeholder') { @content; opacity:  1; }
+  /* Mozilla Firefox 19+ */
+	@include optional-at-root('::-moz-placeholder') { @content; opacity: 1; }
+  /* Internet Explorer 10-11 */
+	@include optional-at-root(':-ms-input-placeholder') {	@content;	}
+  /* Microsoft Edge */
+	@include optional-at-root('::-ms-input-placeholder') { @content; }
+}
+
+//Media Query manager
+/*
+xs: 0       --> ZERO
+sm: 576px   --> MOBILE
+md: 768px   --> TABLET PORTRAIT
+lg: 992px   --> TABLE LANDSCAPE
+xl: 1200px  --> DESKTOP or where just normal style apply
+*/
+
+@mixin res($breakpoint) {
+  @if $breakpoint == 'xs' {
+    @media only screen and (max-width: calc(map-get($map: $grid-breakpoints, $key: 'xs') - 1px)) { @content; }
+  }
+  @if $breakpoint == 'sm' {
+    @media only screen and (max-width: calc(map-get($map: $grid-breakpoints, $key: 'sm') - 1px)) { @content; }
+  }
+  @if $breakpoint == 'md' {
+    @media only screen and (max-width: calc(map-get($map: $grid-breakpoints, $key: 'md') - 1px)) { @content; }
+  }
+  @if $breakpoint == 'lg' {
+    @media only screen and (max-width: calc(map-get($map: $grid-breakpoints, $key: 'lg') - 1px)) { @content; }
+  }
+  @if $breakpoint == 'xl' {
+    @media only screen and (max-width: calc(map-get($map: $grid-breakpoints, $key: 'xl') - 1px)) { @content; }
+  }
+}

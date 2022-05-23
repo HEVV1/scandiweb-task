@@ -1,0 +1,31 @@
+@charset "UTF-8";
+// Abstracts - Variables, functions, mixins, and placeholders
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/fonts";
+// @import "../fonts/fontawesome-pro-5.12.0-web/css/all.min.css";
+// Vendors
+@import "vendors/normalize";
+@import "vendors/bootstrap/bootstrap-variables-override";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+// Base
+@import "base/base";
+@import "base/typography";
+@import "base/helpers";
+@import "base/animations";
+@import "base/utilities";
+// Components
+//..........//
+// Blocks
+//..........//
+// Layouts
+@import "layouts/header";
+@import "layouts/form";
+@import "layouts/footer";
+// Pages
+//..........//
+// Browser-specific overrides
+@import "overrides/ff_only";
+@import "overrides/safari_only";
+@import "overrides/ie10+";
+@import "overrides/print";

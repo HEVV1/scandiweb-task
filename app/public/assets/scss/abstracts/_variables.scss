@@ -1,0 +1,16 @@
+/* Colors -----------------------------------------------------------------*/
+$color_white:                 #FFFFFF; // White
+$color_black:                 #000000; // Black
+$color_primary:               #a09595; //Primary color
+/* Fonts ------------------------------------------------------------------*/
+$font_awesome_5_pro: 'Font Awesome 5 Pro';
+$font_family_lato: 'Lato', sans-serif;
+$default_font_family: $font_family_lato;
+$default_font_size: 1.6rem;
+$default_font_weight: 400;
+$default_line_height: 1.7;
+$default_font_color: $color_black;
+/* Other ------------------------------------------------------------------*/
+$regular_content_width: 114rem + 5.4rem; // content + outside gutter (left and right together)
+$image_directory: '../../images/';
+$default_transition_time: .3s;
