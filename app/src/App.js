@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { Component } from "react";
+import Header from "./Components/Layout/Header/Header";
+import ProductsList from "./Components/Products/ProductsList";
 
-export function App() {
-  return (
-    <div>
-      <h1>React App</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos delectus voluptatem ab repellat saepe eos molestiae cupiditate, omnis doloremque, necessitatibus totam consectetur porro sint quam libero aperiam? Laborum, quaerat?</p>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="wrapper-page-header-and-content">
+        <Header />
+        <div className="wrapper-page-content">
+          <div className="wrapper-text-header mb-100">
+            <div className="container">
+              <h2 className="styled-as-h2">Category name</h2>
+            </div>
+          </div>
+          <ProductsList></ProductsList>
+        </div>
+      </div>
+    );
+  }
 }
+
+export default App;

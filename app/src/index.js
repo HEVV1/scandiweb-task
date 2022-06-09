@@ -1,9 +1,20 @@
-require('file-loader?name=[name].[ext]!./index.html');
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { App } from './App';
-import '../public/assets/scss/public.scss';
+// require('file-loader?name=[name].[ext]!./index.html')
+import App from './App'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
-const appElement = document.getElementById('app');
+import "./assets/js/public.js";
+import "./assets/scss/public.scss";
 
-ReactDOM.render(<App />, appElement);
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/graphql',
+  cache: new InMemoryCache(),
+})
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root'),
+)
