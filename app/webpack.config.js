@@ -13,7 +13,7 @@ const plugins = [
     filename: "css/[name].[contenthash].css",
   }),
   new HtmlWebpackPlugin({
-    template: "./src/index.html",
+    template: "./public/index.html",
     filename: "./index.html",
   }),
   new ReactRefreshWebpackPlugin(),
@@ -32,8 +32,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].[contenthash].js",
-    // this places all images processed in an image folder
-    // assetModuleFilename: "images/[hash][ext][query]",
   },
   optimization: {
     splitChunks: {

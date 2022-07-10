@@ -1,0 +1,10 @@
+.block-attributes-list {  
+  .attributes__list-wrapper {
+    display: flex;
+  }
+  &.selected{
+    &:not(:last-child){
+      margin-bottom: 2.4rem;
+    }
+  }
+}

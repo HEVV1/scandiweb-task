@@ -1,0 +1,10 @@
+.block-color-list {  
+  .color__list-wrapper {
+    display: flex;    
+  }
+  &.selected{
+    &:not(:last-child){
+      margin-bottom: 2.4rem;
+    }
+  }
+}

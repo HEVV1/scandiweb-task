@@ -1,0 +1,12 @@
+.block-cart{
+  .cart__wrapper{
+    .cart__wrapper--text-price{
+      span{
+        &:first-child{
+          display: inline-block;
+          width: 13rem;
+        }
+      }
+    }
+  }
+}

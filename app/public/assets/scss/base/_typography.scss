@@ -1,0 +1,93 @@
+h1,
+.styled-as-h1 {
+  color: $default_font_color;
+  font-size: $default_font_size;
+  font-family: $default_font_family;
+  font-weight: $default_font_weight;
+  line-height: $default_line_height;
+  font-style: normal;
+}
+
+h2,
+.styled-as-h2 {
+  color: $default_font_color;
+  font-size: 4.2rem;
+  font-family: $default_font_family;
+  font-weight: 400;
+  line-height: $default_line_height;
+  font-style: normal;
+}
+
+h3,
+.styled-as-h3 {
+  color: $default_font_color;
+  font-size: 3.2rem;
+  font-family: $default_font_family;
+  font-weight: 700;
+  line-height: 4rem;
+  font-style: normal;
+}
+
+h4,
+.styled-as-h4 {
+  color: $default_font_color;
+  font-size: 3rem;
+  font-family: $default_font_family;
+  font-weight: 600;
+  line-height: 2.7rem;
+  font-style: normal;
+}
+
+h5,
+.styled-as-h5 {
+  color: $default_font_color;
+  font-size: $default_font_size;
+  font-family: $default_font_family;
+  font-weight: $default_font_weight;
+  line-height: $default_line_height;
+  font-style: normal;
+}
+
+.styled-as-p1 {
+  color: $default_font_color;
+  font-size: 1.8rem;
+  font-family: $default_font_family;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.styled-as-p2 {
+  color: $default_font_color;
+  font-size: 2.4rem;
+  font-family: $default_font_family;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.styled-as-p3 {
+  color: $default_font_color;
+  font-size: 3rem;
+  font-family: $default_font_family;
+  font-weight: 400;
+  line-height: 2.7rem;
+  font-style: normal;
+}
+.styled-as-p4 {
+  color: $default_font_color;
+  font-size: 2.4rem;
+  font-family: $default_font_family;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+@include res('md') {
+  h2,
+  .styled-as-h2 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}

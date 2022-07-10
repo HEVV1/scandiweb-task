@@ -1,0 +1,20 @@
+/* Colors -----------------------------------------------------------------*/
+$color_white:                 #FFFFFF; // White
+$color_black:                 #1D1F22; // Black
+$color_primary:               #5ECE7B; // Primary
+$color_grey:                  #EEEEEE; // Grey
+$color_dark_grey:             #8D8F9A; // Dark Grey
+$color_light_grey:            #E5E5E5; // Ultra Light Grey
+/* Fonts ------------------------------------------------------------------*/
+$font_awesome_5_pro: 'Font Awesome 5 Pro';
+$font_family_realeway: 'Raleway', sans-serif;
+$font_family_source_sancs_pro: 'Source Sans Pro', sans-serif;
+$default_font_family: $font_family_realeway;
+$default_font_size: 1.6rem;
+$default_font_weight: 400;
+$default_line_height: 1;
+$default_font_color: $color_black;
+/* Other ------------------------------------------------------------------*/
+$regular_content_width: 119rem + 5.4rem; // content + outside gutter (left and right together)
+$image_directory: '../../images/';
+$default_transition_time: .3s;
